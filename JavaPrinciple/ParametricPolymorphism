@@ -1,1 +1,75 @@
+package ch7;
 
+import java.util.*;
+
+class Product{
+	int price; // product price
+	int bonusPoint; //product bonus point
+	
+	Product(int price){
+		this.price = price;
+		bonusPoint = (int) (price/10.0);
+	}
+	// Constructor of product
+}
+
+class Tv1 extends Product{
+	Tv1(){
+		super(100);
+	}
+	// This is constructor, and it will use parents class constructor
+	public String toString(){
+		return "Tv";
+	}
+}
+
+class Computer extends Product{
+	Computer(){
+		super(200);
+	}
+	public String toString(){
+		return "Computer";
+	}
+}
+
+class Buyer{
+	int money;
+	int bonusPoint = 0;
+	
+	void buy(Product p){ //new Tv1() //new Computer() 가능 
+		//The address of TV and Computer object will be Product p
+		
+		if(money < p.price){
+			System.out.println("You can not buy this Item due to shortage");
+			return;
+		}
+		
+		money = money - p.price;
+		
+		bonusPoint = bonusPoint +  p.bonusPoint;
+		
+		System.out.println(p + " You Purchased");
+	}
+}
+
+
+public class ParametricPolymorphism {
+
+	public static void main(String[] args) {
+		Buyer b = new Buyer();
+		Scanner myScan = new Scanner(System.in);
+		System.out.println("Enter your money");
+		
+		int i = myScan.nextInt();
+		
+		b.money = i;
+		
+		b.buy(new Tv1());
+		
+		b.buy(new Computer());
+		
+		System.out.println("Remaining money is" + b.money + "dollars");
+		
+		System.out.println("Your bonus point is " + b.bonusPoint +"points");
+	}
+}
