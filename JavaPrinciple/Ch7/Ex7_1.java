@@ -19,9 +19,10 @@ class Tv{
 	}
 }
 
-class SmartTv extends Tv{	// SmartTV는 TV에 자막을 보여주는 기능이 있다. 
+class SmartTv extends Tv{	// SmartTV has caption function. 
 	
 	boolean caption;	//	Caption on/off
+	//	default value is false.
 	
 	void displayCaption(String text) {
 		if(caption) {	// if status of caption is true, it will show caption
