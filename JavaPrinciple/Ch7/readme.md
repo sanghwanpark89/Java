@@ -9,4 +9,5 @@
     7.7 will cover access modifier and encapsulation.
     7.8 will cover polymorphism
     7.9 will cover parameter argument polymorphism
-    7.10 wii couver array with objects
+    7.10 wii cover array with objects
+    7.11 will cover abstract class
