@@ -1,31 +1,25 @@
-package ch7;
+package ch07_Ex;
 
 class Tv{
-	
-	boolean power;	//status of power (on/off)
-	
-	int channel;	//channel
-	
+	boolean power;
+	int channel;
 	void power() {
-		power = !power;
+		power =! power;
 	}
-	
 	void channelUp() {
 		++channel;
 	}
-	
 	void channelDown() {
 		--channel;
 	}
+	
 }
 
-class SmartTv extends Tv{	// SmartTV has caption function. 
-	
-	boolean caption;	//	Caption on/off
-	//	default value is false.
+class SmartTv extends Tv{
+	boolean caption;
 	
 	void displayCaption(String text) {
-		if(caption) {	// if status of caption is true, it will show caption
+		if(caption) {
 			System.out.println(text);
 		}
 	}
@@ -36,18 +30,15 @@ public class Ex7_1 {
 	public static void main(String[] args) {
 		
 		SmartTv stv = new SmartTv();
-		
-		stv.channel = 10;	//	member From Parent
-		stv.channelUp();	//	member From parent
-		stv.channelDown();
-		
+		stv.channel = 10;
+		stv.channelUp();
 		System.out.println(stv.channel);
 		
 		stv.displayCaption("Hello World");
-		
 		stv.caption = true;
+		stv.displayCaption("Hellow, world");
 		
-		stv.displayCaption("Hello World");
+
 	}
 
 }
