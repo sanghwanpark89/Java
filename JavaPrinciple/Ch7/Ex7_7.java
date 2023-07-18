@@ -1,46 +1,43 @@
-package ch7;
-
-class Time{
-	private int hour;
-	private int minute;
-	private int second;
-	
-	public void setHour(int hour) {
-		if(isNotValidHour(hour)) {
-			return;
-		}
-		
-		this.hour = hour;
-	}
-	
-	private boolean isNotValidHour(int hour) {	//	private method is used only in Time class.
-		if(hour<0 || hour > 23) {	//	isNotValidHour method will check the hour if it is between 0-23
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
-	public int getHour() {
-		return this.hour;
-	}
-}
+package ch07_Ex;
 
 public class Ex7_7 {
 
 	public static void main(String[] args) {
 		
-		Time t = new Time();
+		Car c = new Car();
+		FireEngine fe = new FireEngine();
+		FireEngine fe2 = new FireEngine();
 		
-		t.setHour(21);
+		fe.water();
+		c = (Car)fe;
+		c.drive();
 		
-		System.out.println(t.getHour());
-		
-		t.setHour(100);
-		
-		System.out.println(t.getHour());
+		c = fe;
+		fe2 = (FireEngine)c;
+		fe2.water();
 		
 	}
 
+}
+
+class Car{
+	
+	String color;
+	int door;
+	
+	void drive() {
+		System.out.println("drive, vroom");
+	}
+	
+	void stop() {
+		System.out.println("stop");
+	}
+}
+
+class FireEngine extends Car{
+	
+	void water() {
+		System.out.println("water!");
+	}
+	
 }
