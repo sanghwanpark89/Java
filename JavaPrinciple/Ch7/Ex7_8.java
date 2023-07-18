@@ -1,40 +1,62 @@
-package ch7;
+package ch07_Ex;
+
+class Product{
+	int price;
+	int bonusPoint;
+	
+	Product(int price){
+		this.price = price;
+		bonusPoint = (int)(price/10.0);
+	}
+}
+
+class Tv1 extends Product{
+	Tv1(){
+		super(100);
+	}
+	
+	public String toString() {
+		return "Tv";
+	}
+}
+
+class Computer extends Product{
+	Computer(){
+		super(200);
+	}
+	
+	public String toString() {
+		return "Computer";
+	}
+}
+
+class Buyer{
+	int money = 1000;
+	int bonusPoint = 0;
+	
+	void buy(Product p) {
+		if(money < p.price) {
+			System.out.println("Declined: You need more money");
+			return;
+		}
+		
+		money -= p.price;
+		bonusPoint += p.bonusPoint;
+		System.out.println(p + "을/를 구입하셨습니다.");
+	}
+}
 
 public class Ex7_8 {
 
 	public static void main(String[] args) {
 		
-		Car c = new Car();// Car instance
+		Buyer b = new Buyer();
 		
-		FireEngine fe = new FireEngine();//FireEngine instance
+		b.buy(new Tv1());
+		b.buy(new Computer());
 		
-		FireEngine fe2 = (FireEngine) c;	// c is the address of car instance
-		
-		Car c1 = new FireEngine();
-		//c1.water(); c1 cannot access water() method
-		
-		fe2.stop();
-		
-		fe.stop();
+		System.out.println("current money " + b.money +" dollar");
+		System.out.println("current bonus point is" + b.bonusPoint +" point");
 	}
 
-}
-
-class Car{
-	String color;
-	int door;
-	
-	void drive() {
-		System.out.println("DRIVE function!!!");
-	}
-	
-	void stop() {
-		System.out.println("STOP function!!!");
-	}
-}
-
-class FireEngine extends Car{
-	void water() {
-		System.out.println("Water function!!!");
-	}
 }
