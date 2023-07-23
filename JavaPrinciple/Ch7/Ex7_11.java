@@ -1,32 +1,52 @@
-package ch7;
-
-abstract class Player{	//abstract class(incomplete class, incomplete blueprint)
-	abstract void play(int pos);	//
-	abstract void stop();
-}
-
-class AudioPlayer extends Player{
-	void play(int pos) {
-		System.out.println("It will play from " + pos);
-	}
-	
-	void stop() {
-		System.out.println("Stop the player");
-	}
-}
+package ch07_Ex;
 
 public class Ex7_11 {
 
 	public static void main(String[] args) {
 		
-		//Player p = new Player();
-		//We cannot make the new instance from abstract class
-		
-		AudioPlayer ap = new AudioPlayer();
-		
-		ap.play(100);
-		ap.stop();
+		Child3 c = new Child3();
+		c.method1();
+		c.method2();
+		MyInterface.staticMethod();
+		MyInterface2.staticMethod();
 
 	}
-
 }
+
+class Child3 extends Parent3 implements MyInterface, MyInterface2{
+	public void method1() {
+		System.out.println("method1() in child3");
+	}
+}
+
+class Parent3{
+	public void method2() {
+		System.out.println("method2() in parent3");
+	}
+}
+
+interface MyInterface{
+	default void method1() {
+		System.out.println("method1() in MyInterface");
+	}
+	
+	default void method2() {
+		System.out.println("method2 in MyInterface");
+	}
+	
+	static void staticMethod() {
+		System.out.println("staticMethod() in MyInterface");
+	}
+}
+
+interface MyInterface2{
+	default void method1() {
+		System.out.println("method1() in MyInterface2");
+	}
+	
+	static void staticMethod() {
+		System.out.println("staticMethod() in MyInterface2");
+	}
+}
+
+
