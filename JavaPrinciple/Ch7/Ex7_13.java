@@ -1,7 +1,7 @@
 package ch7;
 
 abstract class Unit2{
-	int x;
+	int x; // x, y in the map
 	int y;
 	abstract void move(int x, int y);
 	void stop() {
