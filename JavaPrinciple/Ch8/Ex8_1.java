@@ -11,7 +11,7 @@ public class Ex8_1 {
 		
 		System.out.println(1);
 		
-		try {
+		try { //try catch statement will need 
 			System.out.println(2);
 			System.out.println(2);
 		}
