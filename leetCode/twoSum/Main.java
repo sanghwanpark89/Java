@@ -39,7 +39,7 @@ public class Main {
 		//If you want to print array, you need to Arrays.toString() method to print out the array
 		
 		TwoSum myTwoSum = new TwoSum();
-		//We need to use the TwoSum instance to use twoSum method from TwoSum class
+		//create the TwoSum object and the address will be saved into myTwoSum
 		
 		System.out.println(Arrays.toString(myTwoSum.twoSum(myArray, myTarget)));
 		//This line will send the value of array and target number to Two Sum class then will print out the result
