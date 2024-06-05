@@ -15,7 +15,7 @@ public class Ex6_4 {
 		
 		long result3 = mm.multiply(5L, 3L);
 		
-		long result4 = mm.divide(5L, 3L);
+		double result4 = mm.divide(5L, 3L);	//double 대신 long값으로 호출 하였다. 이 값은 double 로 자동 형 변환 된다.
 		
 		System.out.println(result1);
 		System.out.println(result2);
