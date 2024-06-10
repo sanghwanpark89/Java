@@ -14,7 +14,8 @@ public class Ex6_7 {
 		System.out.println("main() x: " + d.x);
 		
 		change(d);
-		
+		System.out.println("After change(d)");
+		System.out.println("main() : x = " d.x)
 
 	}
 	
