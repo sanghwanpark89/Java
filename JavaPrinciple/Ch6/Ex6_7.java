@@ -1,5 +1,10 @@
 package ch06_Ex;
 
+
+class Data2{
+	int x;
+}
+
 public class Ex6_7 {
 
 	public static void main(String[] args) {
@@ -18,8 +23,4 @@ public class Ex6_7 {
 		System.out.println("change : x " + d.x);
 	}
 
-}
-
-class Data2{
-	int x;
 }
