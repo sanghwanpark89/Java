@@ -13,7 +13,7 @@ public class Ex6_7 {
 
 	}
 	
-	static void change(Data2 d) {
+	static void change(Data2 d) {	//참조형 매개 변수
 		d.x = 1000;
 		System.out.println("change : x " + d.x);
 	}
