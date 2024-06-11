@@ -1,5 +1,9 @@
 package ch06_Ex;
 
+class Data3{
+	int x;
+}
+
 public class Ex6_8 {
 
 	public static void main(String[] args) {
@@ -32,6 +36,3 @@ public class Ex6_8 {
 
 }
 
-class Data3{
-	int x;
-}
