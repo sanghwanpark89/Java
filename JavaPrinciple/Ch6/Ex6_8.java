@@ -27,7 +27,7 @@ public class Ex6_8 {
 	static Data3 copy(Data3 d) {
 		//copy method will return address
 		Data3 tmp = new Data3();
-		//create variable tmp which is data3 data type
+		//create instance tmp which is data3 data type
 		tmp.x = d.x;
 		//copy d.x value to tmp.x
 		return tmp;
