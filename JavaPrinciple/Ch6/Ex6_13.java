@@ -1,22 +1,6 @@
-package ch06_Ex;
-
-public class Ex6_13 {
-
-	public static void main(String[] args) {
-		
-		Car2 c1 = new Car2();
-		Car2 c2 = new Car2("blue"); 
-		
-		System.out.println("color of c1 = " +  c1.color + ", gearType of c1 = " + c1.gearType + ", door of c1 = " + c1.door);
-		System.out.println("color of c2 = " +  c2.color + ", gearType of c2 = " + c2.gearType + ", door of c2 = " + c2.door);
-
-	}
-
-}
-
+package ch6;
 
 class Car2{
-	
 	String color;
 	String gearType;
 	int door;
@@ -34,5 +18,17 @@ class Car2{
 		this.gearType = gearType;
 		this.door = door;
 	}
-	
+}
+
+public class Ex6_13 {
+
+	public static void main(String[] args) {
+		
+		Car2 c1 = new Car2();
+		Car2 c2 = new Car2("blue");
+		
+		System.out.println("c1의 color = " + c1.color + ", gearType = " + c1.gearType + ", door = " + c1.door);
+		System.out.println("c2의 color = " + c2.color + ", gearType = " + c2.gearType + ", door = " + c2.door);
+	}
+
 }
