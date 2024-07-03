@@ -1,10 +1,12 @@
-package ch07_Ex;
+package ch7;
 
 class Tv{
+	
 	boolean power;
 	int channel;
+	
 	void power() {
-		power =! power;
+		power = !power;
 	}
 	void channelUp() {
 		++channel;
@@ -16,14 +18,16 @@ class Tv{
 }
 
 class SmartTv extends Tv{
-	boolean caption;
 	
+	boolean caption;
 	void displayCaption(String text) {
-		if(caption) {
+		if(caption) {	//Captino 상태가 on일때만 text를 출력한다.
 			System.out.println(text);
 		}
 	}
+	
 }
+
 
 public class Ex7_1 {
 
@@ -34,10 +38,9 @@ public class Ex7_1 {
 		stv.channelUp();
 		System.out.println(stv.channel);
 		
-		stv.displayCaption("Hello World");
-		stv.caption = true;
-		stv.displayCaption("Hellow, world");
-		
+		stv.displayCaption("Hello, World");
+		stv.caption = true;	//캡션 기능을 켠다
+		stv.displayCaption("Hello, World");
 
 	}
 
