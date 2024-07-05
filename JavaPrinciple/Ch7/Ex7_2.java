@@ -12,7 +12,7 @@ public class Ex7_2 {
 }
 
 class Parent{
-	int x = 10;
+	int x = 10;	/* super */
 }
 
 class Child extends Parent{
