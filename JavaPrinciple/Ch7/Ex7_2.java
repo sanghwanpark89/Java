@@ -1,4 +1,4 @@
-package ch07_Ex;
+package ch7;
 
 public class Ex7_2 {
 
@@ -16,11 +16,11 @@ class Parent{
 }
 
 class Child extends Parent{
-	int x = 20;
+	int x = 20;	//기존의 10이 었던 값이 바뀐다.
 	
 	void method() {
 		System.out.println("x = " + x);
 		System.out.println("this.x = " + this.x);
-		System.out.println("super.x= " + super.x);
+		System.out.println("super.x= " + super.x);	//부모값을 받는다.
 	}
 }
