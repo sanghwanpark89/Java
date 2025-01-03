@@ -3,10 +3,12 @@ package ch7;
 class Point{
 	int x;
 	int y;
+	//variables of parent class
 }
 
 class Circle extends Point{
 	int r;
+	//variable of child class and extends of parents class
 }
 
 public class InheritanceTest {
