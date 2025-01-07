@@ -26,6 +26,12 @@ public class Ex5_1 {
 			System.out.printf("Element of array[%d] is %d%n", i, Array1[i]);
 		}
 		
+		System.out.println(Array1);
+		System.out.println(Array2);
+		System.out.println(Array3);
+		System.out.println(chArray);
+		//character array will print abcd without any delimiter.
+		
 	}
 
 }
