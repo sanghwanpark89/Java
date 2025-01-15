@@ -9,10 +9,7 @@ public class Ex6_10 {
 		System.out.println("mm.add(3,3) result:" + mm.add(3,3L));
 		System.out.println("mm.add(3,3) result:" + mm.add(3L,3));
 		System.out.println("mm.add(3,3) result:" + mm.add(3L,3L));
-
-
 	}
-
 }
 
 class MyMath3{
