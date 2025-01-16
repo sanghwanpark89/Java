@@ -1,20 +1,4 @@
-package ch6;
-
-class Car{
-	String color;	//색상
-	String gearType;	//변속기 종류 - 자동, 수동
-	int door;	//문의 개수
-	
-	Car(){}
-	
-	Car(String c, String g, int d){
-		color = c;
-		gearType = g;
-		door = d;
-	}
-}
-
-
+package ch06_Ex;
 
 public class Ex6_12 {
 
@@ -27,10 +11,24 @@ public class Ex6_12 {
 		
 		Car c2 = new Car("white", "auto", 4);
 		
-		System.out.println("c1의 color= " + c1.color + ", gearType= " + c1.gearType + ", door = " + c1.door);
-		System.out.println("c2의 color= " + c2.color + ", gearType= " + c2.gearType + ", door = " + c2.door);
-		
-		
+		System.out.println("color of c1 = " +  c1.color + "gearType of c1 = " + c1.gearType + "door of c1 = " + c1.door);
+		System.out.println("color of c2 = " +  c2.color + "gearType of c2 = " + c2.gearType + "door of c2 = " + c2.door);
 	}
 
+}
+
+class Car{
+	String color;
+	String gearType;
+	int door;
+	
+	Car(){
+		
+	}
+	
+	Car(String c, String g, int d){
+		color = c;
+		gearType = g;
+		door = d;
+	}
 }
